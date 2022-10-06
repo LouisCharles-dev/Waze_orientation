@@ -10,8 +10,8 @@ pandas==0.19
 beautifulsoup4==4.11.1
 requests==2.27.1
 
-sentence-transformers==2.2.0
-scikit-learn==1.0.2
+#sentence-transformers==2.2.0
+#scikit-learn==1.0.2
 
-#pip install sentence-transformers
-#pip install protobuf
+pip install sentence-transformers
+pip instal scikit-learn
