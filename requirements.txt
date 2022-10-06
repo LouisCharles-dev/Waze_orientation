@@ -6,7 +6,7 @@ MarkupSafe==1.1.1
 Werkzeug==0.15.5
 numpy
 
-pandas==0.19
+pandas
 beautifulsoup4==4.11.1
 requests==2.27.1
 
