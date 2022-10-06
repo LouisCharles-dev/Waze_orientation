@@ -14,4 +14,4 @@ requests==2.27.1
 sentence-transformers==2.2.0
 #scikit-learn==1.0.2
 
-pip instal scikit-learn
+scikit-learn
