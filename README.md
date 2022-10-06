@@ -26,7 +26,7 @@ The project consists in programming an orientation waze to help high school stud
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/LouisCharles-dev/Waze_orientation_app.git
+   git clone https://github.com/LouisCharles-dev/Waze_orientation_test.git
    ```
 2. Install packages
    ```sh
