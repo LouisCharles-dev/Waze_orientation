@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <title> Hetic projet groupe 4 </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+</head>
+
+<body>    
+
+    <div class="work">
+        <h1>Les métiers correspondants :</h1>  
+   
+                {% for metier in recherche_text %}
+                <div class="met">
+                    <a href="/search_rome?label={{metier}}">{{ metier }}</a> 
+                    <a href="/detail_metier?label={{metier}}">En savoir plus</a>
+                </div>      
+                {% endfor %}  
+                <input class="retour" type="button" onclick="javascript:history.back(-1);" value="Retour" />
+    </div>
+
+</body>
+
+</html>

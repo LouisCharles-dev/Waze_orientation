@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <title> Hetic projet groupe 4 </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+</head>
+
+<body> 
+    <div class="prediction">
+        <h1>Waze de l'orientation</h1>
+        <form action="{{ url_for('handle_data')}}" method="post" class="search">
+            <div class="select">
+                <input type="search" id="camenBERT" name="camenBERT" placeholder="Entrez un domaine ou un métier">
+            </div>
+            <br>
+            <button type="submit">Recherche</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<html lang="en">
+    
+    <head>
+        <title> Hetic projet groupe 4 </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+        <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+    </head>
+
+    <body>
+        <div class="formation">
+            <h1>Votre parcours</h1>
+    
+            <article>
+                    <h2>CAP, BEP :</h2>
+                    {% for formation, link in rome_text[3] %}
+                    <p>{{formation}}</p>
+                    <a href="/search_formation?formation={{link}}">Voir plus</a>
+                    {% endfor %}
+                    <!-- fin boucle adresse -->
+                
+            </article>
+
+            <article>
+                <p>
+                    <h2>BAC :</h2>
+                    {% for formation, link in rome_text[2] %}
+                    <p>{{formation}}</p>
+                    <a href="/search_formation?formation={{link}}">Voir plus</a>
+                    {% endfor %}
+                    <!-- fin boucle adresse -->
+                </p>
+            </article>
+
+            <article>           
+                <p>
+                    <h2>BAC + 2 :</h2>
+                    {% for formation, link in rome_text[1] %}
+                    <p>{{formation}}</p>
+                    <a href="/search_formation?formation={{link}}">Voir plus</a>
+                    {% endfor %}
+                    <!-- fin boucle adresse -->
+                </p>
+            </article>
+
+            <article>  
+                <p>
+                    <h2>BAC + 3, BAC + 4 :</h2>
+                    {% for formation,link in rome_text[0] %}
+                    <p>{{formation}}</p>
+                    <a href="{{link}}">Voir plus</a> 
+                    {% endfor %}
+                    <!-- fin boucle adresse -->
+                </p>
+            </article>
+            <input class="retour" type="button" onclick="javascript:history.back(-1);" value="Retour" />
+        </div>
+
+    </body>
+
+</html>

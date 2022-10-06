@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+        <title> Hetic projet groupe 4 </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+        <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+</head>
+
+<body>
+        <div class="formation">    
+                
+                <h1>Voici les formations pour vous</h1>
+
+                <div class = "sidebar" >
+                        <div class ="filtre">
+                                <a href="/search_modalite?mod=modaliteEnseignement=1&rom={{ rome_value }}">Distanciel</a> 
+                                <a href="/search_modalite?mod=modaliteEnseignement=0&rom={{ rome_value }}">Présentiel</a>
+                                <a href="/search_modalite?mod=modaliteEnseignement=2&rom={{ rome_value }}&certifiante=1">Certifante</a>
+                                <a href="/search_modalite?mod=modaliteEnseignement=2&rom={{ rome_value }}&alternance=1">Alternance</a> 
+                        </div>
+
+                        <div class ="filtre2">
+                                <a href="/search_modalite?mod=modaliteEnseignement=2&rom={{ rome_value }}&niveauDeSortie=4">CAP, BEP</a> 
+                                <a href="/search_modalite?mod=modaliteEnseignement=2&rom={{ rome_value }}&niveauDeSortie=3">Bac</a>
+                                <a href="/search_modalite?mod=modaliteEnseignement=2&rom={{ rome_value }}&niveauDeSortie=2">Bac+2</a>
+                                <a href="/search_modalite?mod=modaliteEnseignement=2&rom={{ rome_value }}&niveauDeSortie=1">Bac+3 à Bac+5</a> 
+                        </div>
+
+                        <div class ="filtre3">
+                                <a href="/search_parcours?rom={{ rome_value }}">Parcours</a> 
+                        </div>
+                </div>
+
+<div class="centered">
+        <div class ="formation_article">
+                        {% for formation in rome_text %}
+                                <article>
+                                        <h2>{{ formation }}</h2>
+                                        <a href="/search_formation?formation={{rome_text[formation]}}">voir plus</a> 
+                                </article>
+                        {% endfor %}      
+</div>
+                </div>
+                <input class="retour" type="button" onclick="javascript:history.back(-1);" value="Retour" />
+        </div>
+
+</body>
+
+</html>

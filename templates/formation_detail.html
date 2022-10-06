@@ -1,0 +1,71 @@
+<html lang="en">
+    
+    <head>
+        <title> Hetic projet groupe 4 </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+        <script type="text/javascript" src="{{url_for('static', filename='js/script.js')}}"></script>
+    </head>
+
+    <body>
+        <div class="infoforma">
+            <h1><!-- nom organisme -->{{formation_text[0]}} </h1>
+    
+            <div class="cinqcinq info">
+                <p>
+                    <span class="typeinfo">Adresse :</span>
+                    {% for adresse in formation_text[2] %}
+                    <br>{{adresse}}
+                    {% endfor %}
+                    <!-- fin boucle adresse -->
+                </p>
+    
+                <p>
+                    <span class="typeinfo">Objectif général :</span>
+                    <!-- début boucle objectif-->
+                    {% for objectif in formation_text[3] %}
+                    <br>{{objectif}}
+                    {% endfor %}
+                    <!-- fin boucle objectif-->
+                </p>
+    
+                <p><!-- durée -->{{formation_text[4]}}</p>
+    
+                <p>
+                    <span class="typeinfo">Prérequis :</span>
+                    <!-- début boucle prérequis-->
+                    {% for prerequis in formation_text[5] %}
+                    <br>{{prerequis}}
+                    {% endfor %}
+                    <!-- fin boucle objectif-->
+                </p>
+    
+                <p>
+                    <span class="typeinfo">Financement :</span>
+                    <br><!-- financement[0]-->{{formation_text[6]}}
+                    <br><!-- financement[1]-->{{formation_text[7]}}
+                </p>
+                <a href="{{formation_text[1]}}"><!-- lien site organisme-->Site de l'établissement</a>
+            </div>
+    
+            <div class="mapouter cinqcinq">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="100%" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=
+                            {% for item in formation_text[8] %}
+                                {{item}}%20
+                            {% endfor %}
+                            &t=&z=9&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <a href="https://123movies-to.org"></a>
+                    <br>
+                    <a href="https://www.embedgooglemap.net">how to add a google map to my website</a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+                </div>
+            </div>
+            <input class="retour" type="button" onclick="javascript:history.back(-1);" value="Retour" />
+        </div>
+
+
+    </body>
+
+</html>
