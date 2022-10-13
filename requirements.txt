@@ -1,19 +1,17 @@
-Python == 3.8.12
 Flask==1.1.1
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
-numpy==1.9.2
-
-pandas==0.19
+numpy
+protobuf==3.20
+pandas
 beautifulsoup4==4.11.1
 requests==2.27.1
+sentence-transformers
+
+scikit-metrics
 
 
-#sentence-transformers==2.2.0
-#scikit-learn==1.0.2
 
-pip install sentence-transformers
-pip instal scikit-learn

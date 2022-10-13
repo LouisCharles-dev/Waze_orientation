@@ -34,7 +34,7 @@ def detail_metier():
   data = data[['code_ROME','Libellé ROME']]
   data = data[data['Libellé ROME']==label]
   rome_value = data['code_ROME'].iloc[0]
-  df_detail_metier = pd.read_csv('textes-sur-les-fiches-rome-regex.csv')
+  df_detail_metier = pd.read_csv('textes-rome-compact.csv')
   df_detail_metier = df_detail_metier[df_detail_metier['ROME_PROFESSION_CARD_CODE']==rome_value]
 
   return render_template('metiers_detail.html', recherche_text=df_detail_metier.TXT_NAME.tolist())
