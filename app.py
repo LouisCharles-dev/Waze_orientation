@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 from fonction import handle_rome, scrapper_formation, handle_modalite, handle_parcours
+import os
 
 app = Flask(__name__)
 
