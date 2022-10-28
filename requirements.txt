@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 Flask==1.1.1
 gunicorn==19.9.0
 itsdangerous==1.1.0
@@ -9,6 +10,6 @@ protobuf==3.20
 pandas
 beautifulsoup4==4.11.1
 requests==2.27.1
-torch==1.12.1+cpu 
+torch==1.9.1+cpu 
 #sentence-transformers
 
