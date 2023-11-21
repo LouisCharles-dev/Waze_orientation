@@ -26,12 +26,10 @@ The project consists in programming an orientation waze to help high school stud
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/LouisCharles-dev/Waze_orientation_test.git
+   git clone https://github.com/LouisCharles-dev/Waze_orientation.git
    ```
 2. Install packages
    ```sh
-   pip install sentence-transformers
-   pip install protobuf
    pip install -r requirements.txt
    ```
     
